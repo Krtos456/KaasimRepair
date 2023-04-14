@@ -18,7 +18,7 @@ public class KaasimRepair {
      * @param args the command line arguments
      */
     private static ArrayList<LoginDetails> LoginDetailList=new ArrayList<>();
-    private static LoginScreen LoginRef =null;
+    private static F_LoginScreen LoginRef =null;
     public static void main(String[] args) {
         try{
         File LoginDetails = new File("LoginDetails.txt");
@@ -32,7 +32,7 @@ public class KaasimRepair {
         }
         finally{
         
-        LoginRef =new LoginScreen();
+        LoginRef =new F_LoginScreen();
         LoginRef.setVisible(true);
         }
     }
@@ -59,13 +59,13 @@ public class KaasimRepair {
                 switch(LoginDetailList.get(x).Type)
                 {
                     case"SysAdmin":
-                        new SysAdminHome().setVisible(true);
+                        new F_SysAdminHome().setVisible(true);
                         break;
                     case"Mechanic":
-                        new MechanicHome().setVisible(true);
+                        new F_MechanicHome().setVisible(true);
                         break;
                     case"SalAdmin":
-                        new SalesAdminHome().setVisible(true);
+                        new F_SalesAdminHome().setVisible(true);
                         break;
                     default: 
                         break;
